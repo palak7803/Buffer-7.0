@@ -4,6 +4,32 @@
 A multi-level military supply chain management system written in Java.  
 Refactored from a single-file design into a clean, modular package structure.
 
+## Data Structures Used
+
+| Data Structure     | Usage Area                | Purpose                                                  |
+|------------------|--------------------------|----------------------------------------------------------|
+| **HashMap**       | Password Storage          | Stores username → encrypted password                     |
+| **HashMap**       | Login Attempts            | Tracks number of failed login attempts                   |
+| **HashMap**       | Account Lock System       | Stores account lock duration                             |
+| **HashMap**       | Warehouse Levels          | Maps warehouse → hierarchy level                         |
+| **HashMap**       | Manager IDs               | Maps warehouse → manager ID                              |
+| **HashMap**       | Warehouse Database        | Stores warehouse → warehouse object                      |
+| **HashMap**       | Graph Representation      | Stores node → connected edges                            |
+| **HashMap**       | Inventory Management      | Stores item name → item stock details                    |
+| **ArrayList**     | Pending Requests          | Stores all supply requests                               |
+| **ArrayList**     | Pending Deliveries        | Stores all delivery orders                               |
+| **ArrayList**     | Graph Edges               | Stores connected nodes with distances                    |
+| **ArrayList**     | Eligible Suppliers        | Temporary list of available suppliers                    |
+| **ArrayList**     | Distance Results          | Used for sorting distances in path view                  |
+| **LinkedList**    | Replenishment Queue       | Maintains FIFO request handling                          |
+| **Queue**         | Replenishment Requests    | Ensures first request is processed first                 |
+| **PriorityQueue** | FEFO Inventory Batches    | Processes earliest expiry stock first                    |
+| **PriorityQueue** | Dijkstra Algorithm        | Selects minimum distance node first                      |
+| **LinkedList**    | Path Tracking             | Stores shortest path route                               |
+| **List Interface**| Delivery Path             | Stores supplier → receiver route                         |
+| **StringBuilder** | Encryption/Decryption     | Efficient string manipulation                            |
+| **Arrays**        | Fixed Item List           | Stores predefined inventory items                        |
+| **Scanner**       | Input Handling            | Handles user input                                       |
 ---
 
 ## Folder Structure
